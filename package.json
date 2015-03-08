@@ -1,0 +1,45 @@
+{
+  "name": "react-layout",
+  "description": "React auto-suggest component",
+  "main": "dist/Layout.js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomkp/react-layout"
+  },
+  "author": "tomkp <tom@tomkp.com>",
+  "keywords": [
+    "react",
+    "react-component",
+    "flexbox"
+  ],
+  "devDependencies": {
+    "babel-core": "^4.6.6",
+    "babel-jest": "^4.0.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-watch": "^4.1.1",
+    "jest-cli": "^0.4.0",
+    "react-tools": "^0.13.0-rc1",
+    "reactify": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "moment": "^2.9.0",
+    "normalize.css": "^3.0.2",
+    "react": "^0.13.0-rc1"
+  },
+  "jest": {
+    "rootDir": "./src",
+    "scriptPreprocessor": "../preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "react"
+    ]
+  }
+}
