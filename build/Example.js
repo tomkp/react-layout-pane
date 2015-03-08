@@ -16,22 +16,22 @@ var Example = React.createClass({
     render: function render() {
         return React.createElement(
             Layout,
-            { type: "rows" },
+            { type: "columns" },
             React.createElement(
                 Fixed,
-                { className: "header" },
-                "Fixed Header"
+                { className: "sidebar" },
+                "Fixed Sidebar"
             ),
             React.createElement(
                 Flex,
                 null,
                 React.createElement(
                     Layout,
-                    { type: "columns" },
+                    { type: "rows" },
                     React.createElement(
                         Fixed,
-                        { className: "sidebar" },
-                        "Fixed Sidebar"
+                        { className: "header" },
+                        "Fixed Header"
                     ),
                     React.createElement(
                         Flex,
