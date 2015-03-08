@@ -1,5 +1,6 @@
 # react-layout
 
+React layout component using flexbox.
 
 ## Example 1
 
