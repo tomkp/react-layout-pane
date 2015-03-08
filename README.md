@@ -14,7 +14,7 @@
 
 
 <div align="center">
-  <img src="docs.cap1png"/>
+  <img src="docs.cap1.png"/>
 </div>
 
 
@@ -32,7 +32,7 @@
 
 
 <div align="center">
-  <img src="docs.cap2png"/>
+  <img src="docs/cap2.png"/>
 </div>
 
 
@@ -50,7 +50,7 @@
 
 
 <div align="center">
-  <img src="docs.cap3png"/>
+  <img src="docs/cap3.png"/>
 </div>
 
 
