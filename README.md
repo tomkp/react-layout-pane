@@ -4,6 +4,11 @@
 ## Example 1
 
 
+<div align="center">
+  <img src="docs/cap1.png"/>
+</div>
+
+
 ```html
    <Layout type="rows">
        <Fixed className="header">
@@ -16,12 +21,12 @@
 ```
 
 
-<div align="center">
-  <img src="docs/cap1.png"/>
-</div>
-
-
 ## Example 2
+
+
+<div align="center">
+  <img src="docs/cap2.png"/>
+</div>
 
 
 ```html
@@ -37,12 +42,12 @@
 ```
 
 
-<div align="center">
-  <img src="docs/cap2.png"/>
-</div>
-
-
 ## Example 3
+
+
+<div align="center">
+  <img src="docs/cap3.png"/>
+</div>
 
 
 ```html
@@ -58,12 +63,12 @@
 ```
 
 
-<div align="center">
-  <img src="docs/cap3.png"/>
-</div>
-
-
 ## Example 4
+
+
+<div align="center">
+  <img src="docs/cap4.png"/>
+</div>
 
 
 ```html
@@ -109,15 +114,15 @@
 ```
 
 
-<div align="center">
-  <img src="docs/cap4.png"/>
-</div>
-
-
  ## Example 5
 
 
- ```html
+ <div align="center">
+   <img src="docs/cap5.png"/>
+ </div>
+
+
+```html
     <Layout type="rows">
         <Fixed className="header">
             Fixed Header
@@ -158,11 +163,6 @@
         </Fixed>
     </Layout>
  ```
-
-
- <div align="center">
-   <img src="docs/cap5.png"/>
- </div>
 
 
 ## CSS
