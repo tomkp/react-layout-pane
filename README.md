@@ -1,6 +1,9 @@
 # react-layout
 
 
+## Example 1
+
+
 ```html
    <Layout type="rows">
        <Fixed className="header">
@@ -16,6 +19,9 @@
 <div align="center">
   <img src="docs/cap1.png"/>
 </div>
+
+
+## Example 2
 
 
 ```html
@@ -36,6 +42,9 @@
 </div>
 
 
+## Example 3
+
+
 ```html
     <Layout type="columns">
         <Fixed className="sidebar">Fixed Sidebar</Fixed>
@@ -53,6 +62,8 @@
   <img src="docs/cap3.png"/>
 </div>
 
+
+## CSS
 
 
 ```css
