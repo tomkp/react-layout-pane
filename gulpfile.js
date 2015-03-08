@@ -12,7 +12,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('babel', ['clean'], function () {
-    return gulp.src('src/*.js')
+    return gulp.src(['src/*.js', 'example/*.js'])
         .pipe(babel())
         .pipe(gulp.dest('build'))
 });
@@ -28,11 +28,12 @@ gulp.task('browserify', ['babel'], function() {
 });
 
 
-gulp.task('example', [], function() {
-    return gulp.src('example/Example.js')
-        .pipe(babel())
+gulp.task('example', ['babel'], function() {
+    return gulp.src('build/Example.js')
         .pipe(browserify())
-        .pipe(gulp.dest('example'))
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest('dist'))
         ;
 });
 
