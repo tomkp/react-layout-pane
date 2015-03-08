@@ -14,7 +14,7 @@
 
 
 <div align="center">
-  <img src="docs.cap1.png"/>
+  <img src="docs/cap1.png"/>
 </div>
 
 
