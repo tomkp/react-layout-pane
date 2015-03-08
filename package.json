@@ -33,7 +33,9 @@
   "dependencies": {
     "moment": "^2.9.0",
     "normalize.css": "^3.0.2",
-    "react": "^0.13.0-rc1"
+    "react": "^0.13.0-rc1",
+    "react-prefixr": "^0.1.0",
+    "react-vendor-prefix": "0.0.1"
   },
   "jest": {
     "rootDir": "./src",

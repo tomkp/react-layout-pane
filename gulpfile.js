@@ -28,6 +28,16 @@ gulp.task('browserify', ['babel'], function() {
 });
 
 
+gulp.task('example', ['babel'], function() {
+    return gulp.src('build/Example.js')
+        .pipe(browserify())
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest('dist'))
+        ;
+});
+
+
 gulp.task('watch', function () {
     return watch('./src/**/*', function () {
         gulp.start('default');
