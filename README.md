@@ -63,6 +63,108 @@
 </div>
 
 
+## Example 4
+
+
+```html
+    <Layout type="columns">
+        <Fixed className="sidebar">
+            <Layout type="rows">
+                <Fixed>
+                    Top Left
+                </Fixed>
+                <Flex>
+                </Flex>
+                <Fixed>
+                    Bottom Left
+                </Fixed>
+            </Layout>
+        </Fixed>
+        <Flex>
+            <Layout type="rows">
+                <Fixed className="header">
+                    Fixed Header
+                </Fixed>
+                <Flex className="content">
+                    Flex Body
+                </Flex>
+                <Fixed className="header">
+                    Fixed Footer
+                </Fixed>
+            </Layout>
+        </Flex>
+        <Fixed className="sidebar">
+            <Layout type="rows">
+                <Fixed>
+                    Top Right
+                </Fixed>
+                <Flex>
+                </Flex>
+                <Fixed>
+                    Bottom Right
+                </Fixed>
+            </Layout>
+        </Fixed>
+    </Layout>
+```
+
+
+<div align="center">
+  <img src="docs/cap4.png"/>
+</div>
+
+
+ ## Example 5
+
+
+ ```html
+    <Layout type="rows">
+        <Fixed className="header">
+            Fixed Header
+        </Fixed>
+        <Flex>
+            <Layout type="columns">
+                <Fixed className="sidebar">
+                    <Layout type="rows">
+                        <Fixed>
+                            Top Left
+                        </Fixed>
+                        <Flex>
+                        </Flex>
+                        <Fixed>
+                            Bottom Left
+                        </Fixed>
+                    </Layout>
+                </Fixed>
+                <Flex className="content">
+                    Flex Body
+                </Flex>
+                <Fixed className="sidebar">
+                    <Layout type="rows">
+                        <Fixed>
+                            Top Right
+                        </Fixed>
+                        <Flex>
+                        </Flex>
+                        <Fixed>
+                            Bottom Right
+                        </Fixed>
+                    </Layout>
+                </Fixed>
+            </Layout>
+        </Flex>
+        <Fixed className="header">
+            Fixed Footer
+        </Fixed>
+    </Layout>
+ ```
+
+
+ <div align="center">
+   <img src="docs/cap5.png"/>
+ </div>
+
+
 ## CSS
 
 
