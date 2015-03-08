@@ -28,12 +28,11 @@ gulp.task('browserify', ['babel'], function() {
 });
 
 
-gulp.task('example', ['babel'], function() {
-    return gulp.src('build/Example.js')
+gulp.task('example', [], function() {
+    return gulp.src('example/Example.js')
+        .pipe(babel())
         .pipe(browserify())
-        .pipe(sourcemaps.init())
-        .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('example'))
         ;
 });
 
