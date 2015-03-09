@@ -5,7 +5,7 @@ React layout component using flexbox.
 ## Example 1
 
 
-<div align="center">
+<div align="center" width=600>
   <img src="docs/cap1.png"/>
 </div>
 
