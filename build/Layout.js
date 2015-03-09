@@ -4,6 +4,8 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var React = _interopRequire(require("react/addons"));
 
+var prefix = _interopRequire(require("./Prefix"));
+
 var Layout = React.createClass({
     displayName: "Layout",
 
@@ -29,6 +31,8 @@ var Layout = React.createClass({
         if (this.props.type === "rows") {
             styles = {
                 display: "flex",
+                // todo: https://github.com/facebook/react/issues/2020
+                // display: '-webkit-flex',
 
                 WebkitBoxFlex: 1,
                 WebkitFlex: 1,
@@ -66,6 +70,8 @@ var Layout = React.createClass({
                 right: 0
             };
         }
+
+        styles = prefix(styles, window.navigator.userAgent);
 
         var type = this.props.type;
         var index = 0;

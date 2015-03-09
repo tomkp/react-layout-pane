@@ -43,6 +43,9 @@ var Example = React.createClass({
                         </Fixed>
                     </Layout>
                 </Flex>
+                <Fixed className="header">
+                    Fixed Footer
+                </Fixed>
             </Layout>
         );
     }

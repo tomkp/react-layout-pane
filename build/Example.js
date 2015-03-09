@@ -72,6 +72,11 @@ var Example = React.createClass({
                         )
                     )
                 )
+            ),
+            React.createElement(
+                Fixed,
+                { className: "header" },
+                "Fixed Footer"
             )
         );
     }
