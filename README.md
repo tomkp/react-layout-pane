@@ -6,7 +6,7 @@ React layout component using flexbox.
 
 
 <div align="center">
-  <img src="docs/cap1.png"  width=600/>
+  <img src="docs/cap1.png" width=600 style="margin:1rem;" />
 </div>
 
 
@@ -26,7 +26,7 @@ React layout component using flexbox.
 
 
 <div align="center">
-  <img src="docs/cap2.png"/>
+   <img src="docs/cap2.png" width=600 style="margin:1rem;" />
 </div>
 
 
@@ -47,7 +47,7 @@ React layout component using flexbox.
 
 
 <div align="center">
-  <img src="docs/cap3.png"/>
+  <img src="docs/cap3.png" width=600 style="margin:1rem;" />
 </div>
 
 
@@ -68,7 +68,7 @@ React layout component using flexbox.
 
 
 <div align="center">
-  <img src="docs/cap4.png"/>
+  <img src="docs/cap4.png" width=600 style="margin:1rem;" />
 </div>
 
 
@@ -119,7 +119,7 @@ React layout component using flexbox.
 
 
  <div align="center">
-   <img src="docs/cap5.png"/>
+   <img src="docs/cap5.png" width=600 style="margin:1rem;" />
  </div>
 
 
