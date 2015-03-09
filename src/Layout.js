@@ -24,6 +24,8 @@ let Layout = React.createClass({
         if (this.props.type === 'rows') {
             styles = {
                 display: 'flex',
+                // todo: https://github.com/facebook/react/issues/2020
+                // display: '-webkit-flex',
 
                 WebkitBoxFlex: 1,
                 WebkitFlex: 1,
