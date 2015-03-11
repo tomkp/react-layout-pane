@@ -16,10 +16,13 @@
   "devDependencies": {
     "babel-core": "^4.6.6",
     "babel-jest": "^4.0.0",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
     "gulp": "^3.8.11",
     "gulp-babel": "^4.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-clean": "^0.3.1",
+    "gulp-rename": "^1.2.0",
     "gulp-sourcemaps": "^1.5.0",
     "gulp-watch": "^4.1.1",
     "jest-cli": "^0.4.0",
@@ -28,7 +31,8 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "demo": "browserify demo/Example.js -t babelify --outfile demo/bundle.js"
   },
   "dependencies": {
     "autoprefix-style-prop": "^1.0.0",

@@ -26,18 +26,7 @@ let Layout = React.createClass({
         if (this.props.type === 'rows') {
             styles = {
                 display: 'flex',
-                // todo: https://github.com/facebook/react/issues/2020
-                // display: '-webkit-flex',
-
-                WebkitBoxFlex: 1,
-                WebkitFlex: 1,
-                msFlex: 1,
                 flex: 1,
-
-                WebkitBoxOrient: 'vertical',
-                WebkitBoxDirection: 'normal',
-                WebkitFlexDirection: 'column',
-                msFlexDirection: 'column',
                 flexDirection: 'column',
 
                 position: 'relative',
@@ -47,16 +36,7 @@ let Layout = React.createClass({
         } else {
             styles = {
                 display: 'flex',
-
-                WebkitBoxFlex: 1,
-                WebkitFlex: 1,
-                msFlex: 1,
                 flex: 1,
-
-                WebkitBoxOrient: 'horizontal',
-                WebkitBoxDirection: 'normal',
-                WebkitFlexDirection: 'row',
-                msFlexDirection: 'row',
                 flexDirection: 'row',
 
                 height: '100%',
@@ -65,8 +45,6 @@ let Layout = React.createClass({
                 right: 0
             };
         }
-
-        styles = prefix(styles, window.navigator.userAgent);
 
         let type = this.props.type;
         let index = 0;
@@ -77,59 +55,9 @@ let Layout = React.createClass({
             });
         });
 
-        return <div className={classes.join(' ')} style={styles}>{elements}</div>;
+        return <div className={classes.join(' ')} style={prefix(styles)}>{elements}</div>;
     }
 });
 
 
-
-
-
 module.exports = Layout;
-
-/*
-
-
- .Layout {
-     display: flex;
-     flex: 1;
-     position: relative;
- }
-
- // vertically stacked
- .rows {
-     flex-direction: column;
-     height: 100%;
-     min-height: 100%;
- }
-
- // left to right
- .columns {
-     flex-direction: row;
-     height: 100%;
-     position: absolute;
-     left: 0;
-     right: 0;
- }
-
- .rows > .Fixed {
-    width: 100%;
- }
-
- .columns > .Fixed {
-     height: 100%;
- }
-
- .rows > .Flex {
- }
-
- .columns > .Flex {
-    height: 100%;
- }
-
- // flexible content area
- .Flex {
-    flex: 1;
- }
-
- */

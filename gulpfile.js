@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 var clean = require('gulp-clean');
+var rename = require('gulp-rename');
 var browserify = require('gulp-browserify');
 
 
@@ -12,7 +13,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('babel', ['clean'], function () {
-    return gulp.src(['src/*.js', 'example/*.js'])
+    return gulp.src(['src/*.js'])
         .pipe(babel())
         .pipe(gulp.dest('build'))
 });
@@ -28,12 +29,17 @@ gulp.task('browserify', ['babel'], function() {
 });
 
 
-gulp.task('example', ['babel'], function() {
-    return gulp.src('build/Example.js')
+gulp.task('example', function() {
+    gulp.src(['demo/Example.js'])
+        .pipe(babel())
+        .pipe(rename('Example.dist.js'))
+        .pipe(gulp.dest('demo'));
+
+    gulp.src('demo/Example.dist.js')
         .pipe(browserify())
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('demo'))
         ;
 });
 

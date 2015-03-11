@@ -2,7 +2,7 @@
 // https://github.com/appsforartists/autoprefix-style-prop
 
 
-var flexboxKeys = [
+let flexboxKeys = [
     'alignContent',
     'alignItems',
     'alignSelf',
@@ -15,19 +15,17 @@ var flexboxKeys = [
     'flexWrap',
     'justifyContent',
     'order',
-    'transform'
+    'transform',
+    'userSelect'
 ];
 
-function Prefix (styles, userAgent) {
-   
+function prefix (styles) {
 
-    var result = {};
 
-    Object.keys(styles).forEach(
-            key => {
-                console.info('key', key);
-            // Browser sniffing sucks, but Safari overloads display, and there's
-            // no way to set a style key to two values in React
+    let userAgent = window.navigator.userAgent;
+    let result = {};
+
+    Object.keys(styles).forEach(key => {
             if (
                 key === 'display'
                 && styles['display'].indexOf('flex') !== -1
@@ -40,7 +38,6 @@ function Prefix (styles, userAgent) {
             } else if (flexboxKeys.indexOf(key) !== -1) {
                 var titleCasedKey = key.substring(0, 1).toUpperCase() + key.substring(1);
                 result[`Webkit${ titleCasedKey }`] = styles[key];
-
             } else {
                 result[key] = styles[key];
             }
@@ -51,4 +48,4 @@ function Prefix (styles, userAgent) {
 }
 
 
-export default Prefix;
+export default prefix;
