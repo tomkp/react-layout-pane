@@ -1,6 +1,6 @@
 {
-  "name": "react-layout",
-  "description": "React auto-suggest component",
+  "name": "react-flexbox-layout",
+  "description": "React flexbox layout component",
   "main": "dist/Layout.js",
   "version": "0.0.1",
   "repository": {
