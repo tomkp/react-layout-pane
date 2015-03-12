@@ -11,8 +11,8 @@ var Flex = _interopRequire(require("../src/Flex"));
 
 var Fixed = _interopRequire(require("../src/Fixed"));
 
-var Example = React.createClass({
-    displayName: "Example",
+var Demo = React.createClass({
+    displayName: "Demo",
 
     render: function render() {
         return React.createElement(
@@ -84,7 +84,7 @@ var Example = React.createClass({
 
 });
 
-React.render(React.createElement(Example, null), document.body);
+React.render(React.createElement(Demo, null), document.body);
 
 },{"../src/Fixed":176,"../src/Flex":177,"../src/Layout":178,"react":175}],2:[function(require,module,exports){
 // shim for using process in browser

@@ -2,6 +2,9 @@
 
 React layout component using flexbox.
 
+Check out the [demo](http://damaged-turn.surge.sh)
+
+
 ## Example 1
 
 

@@ -4,7 +4,7 @@ import Flex from '../src/Flex';
 import Fixed from '../src/Fixed';
 
 
-var Example = React.createClass({
+var Demo = React.createClass({
 
     render: function() {
         return (
@@ -52,4 +52,4 @@ var Example = React.createClass({
 
 });
 
-React.render(<Example />, document.body);
+React.render(<Demo />, document.body);
