@@ -1,5 +1,5 @@
 {
-  "name": "react-flexbox-layout",
+  "name": "react-layout-pane",
   "description": "React flexbox layout component",
   "main": "dist/Layout.js",
   "version": "0.0.1",
