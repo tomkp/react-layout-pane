@@ -34,4 +34,4 @@ let Flex = React.createClass({
 
 
 
-module.exports = Flex;
+export default Flex;

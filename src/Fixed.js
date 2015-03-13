@@ -27,4 +27,4 @@ let Fixed = React.createClass({
 });
 
 
-module.exports = Fixed;
+export default Fixed;
