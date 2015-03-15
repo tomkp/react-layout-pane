@@ -13,26 +13,34 @@
     "react-component",
     "flexbox"
   ],
+  "dependencies": {
+    "react": "^0.13.0-rc1"
+  },
   "devDependencies": {
     "babel-core": "^4.6.6",
     "babel-jest": "^4.0.0",
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
-    "jest-cli": "^0.4.0"
+    "jest-cli": "^0.4.0",
+    "react-tools": "^0.13.0-rc1"
   },
   "scripts": {
     "test": "jest",
-    "demo": "browserify demo/Demo.js -t babelify --outfile demo/Bundle.js",
-    "build": "browserify src/Layout.js -t babelify --outfile dist/Layout.js"
-  },
-  "dependencies": {
-    "react": "^0.13.0-rc1"
+    "build": "browserify src/Layout.js -t -o dist/Layout.js",
+    "demo": "browserify demo/Example.js -t -o demo/bundle.js"
   },
   "jest": {
     "rootDir": "./src",
     "scriptPreprocessor": "../preprocessor.js",
     "unmockedModulePathPatterns": [
       "react"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
     ]
   }
 }
