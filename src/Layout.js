@@ -15,7 +15,6 @@ let Layout = React.createClass({
     },
 
     render() {
-        console.info('Layout.render');
         let classes = ['Layout'];
         if (this.props.className) {
             classes.push(this.props.className);
@@ -48,12 +47,15 @@ let Layout = React.createClass({
 
         let type = this.props.type;
         let index = 0;
-        let elements = this.props.children.map((child) => {
-            return React.addons.cloneWithProps(child, {
-                type: type,
-                key: index++
+        let elements = [];
+        if (this.props.children) {
+             elements = this.props.children.map((child) => {
+                return React.addons.cloneWithProps(child, {
+                    type: type,
+                    key: index++
+                });
             });
-        });
+        }
 
         return <div className={classes.join(' ')} style={prefix(styles)}>{elements}</div>;
     }

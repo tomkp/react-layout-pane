@@ -3,7 +3,6 @@ import React from 'react';
 let Flex = React.createClass({
 
     render() {
-        console.info('Flex.render');
         let classes = ['Flex'];
         if (this.props.className) {
             classes.push(this.props.className);

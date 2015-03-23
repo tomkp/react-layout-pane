@@ -5,7 +5,6 @@ import React from 'react';
 let Fixed = React.createClass({
 
     render() {
-        console.info('Fixed.render');
         let classes = ['Fixed'];
         if (this.props.className) {
             classes.push(this.props.className);
