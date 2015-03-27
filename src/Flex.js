@@ -1,4 +1,6 @@
 import React from 'react';
+import VendorPrefix from 'react-vendor-prefix';
+
 
 let Flex = React.createClass({
 
@@ -8,26 +10,22 @@ let Flex = React.createClass({
             classes.push(this.props.className);
         }
 
-        let styles;
+        let style;
         if (this.props.type === 'rows') {
-            styles = {
-                WebkitBoxFlex: 1,
-                WebkitFlex: 1,
-                msFlex: 1,
+            style = {
                 flex: 1
             };
         } else {
-            styles = {
-                WebkitBoxFlex: 1,
-                WebkitFlex: 1,
-                msFlex: 1,
+            style = {
                 flex: 1,
 
                 height: '100%',
                 minHeight: '100%'
             };
         }
-        return <div className={classes.join(' ')} style={styles}>{this.props.children}</div>;
+        let prefixed = VendorPrefix.prefix({styles: style});
+
+        return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
     }
 });
 

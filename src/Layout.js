@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import prefix from './Prefix';
+import VendorPrefix from 'react-vendor-prefix';
 
 
 let Layout = React.createClass({
@@ -20,10 +20,10 @@ let Layout = React.createClass({
             classes.push(this.props.className);
         }
 
-        let styles;
+        let style;
 
         if (this.props.type === 'rows') {
-            styles = {
+            style = {
                 display: 'flex',
                 flex: 1,
                 flexDirection: 'column',
@@ -33,7 +33,7 @@ let Layout = React.createClass({
                 minHeight: '100%'
             };
         } else {
-            styles = {
+            style = {
                 display: 'flex',
                 flex: 1,
                 flexDirection: 'row',
@@ -44,6 +44,8 @@ let Layout = React.createClass({
                 right: 0
             };
         }
+
+        let prefixed = VendorPrefix.prefix({styles: style});
 
         let type = this.props.type;
         let index = 0;
@@ -57,7 +59,7 @@ let Layout = React.createClass({
             });
         }
 
-        return <div className={classes.join(' ')} style={prefix(styles)}>{elements}</div>;
+        return <div className={classes.join(' ')} style={prefixed.styles}>{elements}</div>;
     }
 });
 
