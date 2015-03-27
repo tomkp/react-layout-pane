@@ -21922,7 +21922,6 @@ var Flex = React.createClass({
             };
         }
         var prefixed = VendorPrefix.prefix({ styles: style });
-        console.info("prefixed", prefixed);
 
         return React.createElement(
             "div",
@@ -21957,6 +21956,7 @@ var Layout = React.createClass({
     },
 
     render: function render() {
+
         var classes = ["Layout"];
         if (this.props.className) {
             classes.push(this.props.className);
@@ -21988,7 +21988,6 @@ var Layout = React.createClass({
         }
 
         var prefixed = VendorPrefix.prefix({ styles: style });
-        console.info("prefixed", prefixed);
 
         var type = this.props.type;
         var index = 0;
