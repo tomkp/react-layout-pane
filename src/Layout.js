@@ -19,6 +19,7 @@ let Layout = React.createClass({
         if (this.props.className) {
             classes.push(this.props.className);
         }
+        classes.push(this.props.type);
 
         let style;
 

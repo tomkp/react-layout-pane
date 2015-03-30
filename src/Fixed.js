@@ -1,8 +1,17 @@
 import React from 'react';
 
 
-
 let Fixed = React.createClass({
+
+    propTypes: {
+        type: React.PropTypes.string.isRequired
+    },
+
+    getDefaultProps() {
+        return {
+            type: 'columns'
+        }
+    },
 
     render() {
         let classes = ['Fixed'];

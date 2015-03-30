@@ -4,6 +4,16 @@ import VendorPrefix from 'react-vendor-prefix';
 
 let Flex = React.createClass({
 
+    propTypes: {
+        type: React.PropTypes.string.isRequired
+    },
+
+    getDefaultProps() {
+        return {
+            type: 'columns'
+        }
+    },
+
     render() {
         let classes = ['Flex'];
         if (this.props.className) {
