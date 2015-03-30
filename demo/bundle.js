@@ -21863,6 +21863,16 @@ var React = _interopRequire(require("react"));
 var Fixed = React.createClass({
     displayName: "Fixed",
 
+    propTypes: {
+        type: React.PropTypes.string.isRequired
+    },
+
+    getDefaultProps: function getDefaultProps() {
+        return {
+            type: "columns"
+        };
+    },
+
     render: function render() {
         var classes = ["Fixed"];
         if (this.props.className) {
@@ -21901,6 +21911,16 @@ var VendorPrefix = _interopRequire(require("react-vendor-prefix"));
 
 var Flex = React.createClass({
     displayName: "Flex",
+
+    propTypes: {
+        type: React.PropTypes.string.isRequired
+    },
+
+    getDefaultProps: function getDefaultProps() {
+        return {
+            type: "columns"
+        };
+    },
 
     render: function render() {
         var classes = ["Flex"];
@@ -21956,11 +21976,11 @@ var Layout = React.createClass({
     },
 
     render: function render() {
-
         var classes = ["Layout"];
         if (this.props.className) {
             classes.push(this.props.className);
         }
+        classes.push(this.props.type);
 
         var style = undefined;
 
