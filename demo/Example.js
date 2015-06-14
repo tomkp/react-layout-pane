@@ -2,7 +2,7 @@ import React from 'react';
 import {Layout, Flex, Fixed} from '../index';
 
 
-var Demo = React.createClass({
+let Demo = React.createClass({
 
     render: function() {
         return (
