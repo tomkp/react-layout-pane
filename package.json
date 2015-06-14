@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomkp/react-layout"
+    "url": "https://github.com/tomkp/react-layout-pane"
   },
   "author": "tomkp <tom@tomkp.com>",
   "keywords": [
