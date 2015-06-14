@@ -1,14 +1,14 @@
 import expect from 'expect.js';
 import React from 'react/addons';
-let { TestUtils } = React.addons;
-var Layout = require('../src/Layout');
-var Fixed = require('../src/Fixed');
-var Flex = require('../src/Flex');
+const { TestUtils } = React.addons;
+const Layout = require('../src/Layout');
+const Fixed = require('../src/Fixed');
+const Flex = require('../src/Flex');
 
 
 describe('Layout', function () {
 
-    var layout = TestUtils.renderIntoDocument(
+    const layout = TestUtils.renderIntoDocument(
         <Layout type="rows">
             <Fixed className="header">
                 Fixed Header
@@ -20,18 +20,18 @@ describe('Layout', function () {
     );
 
     it('renders the Layout', function () {
-        var component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
+        const component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
         expect(component.getDOMNode().children.length).to.equal(2);
     });
 
 
     it('renders the children', function () {
-        var component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
+        const component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
 
         expect(component.props.children.length).to.equal(2);
 
-        var fixed = component.props.children[0];
-        var flex = component.props.children[1];
+        const fixed = component.props.children[0];
+        const flex = component.props.children[1];
 
         expect(fixed.type.displayName).to.equal('Fixed');
         expect(flex.type.displayName).to.equal('Flex');
