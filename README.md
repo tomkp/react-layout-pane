@@ -118,7 +118,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
 ```
 
 
- ## Example 5
+## Example 5
 
 
  <div align="center">
