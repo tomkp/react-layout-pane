@@ -11,7 +11,11 @@
   "keywords": [
     "react",
     "react-component",
+    "react-layout",
+    "react-layout-pane",
+    "layout-pane",
     "flexbox",
+    "react-flexbox",
     "es6"
   ],
   "dependencies": {
