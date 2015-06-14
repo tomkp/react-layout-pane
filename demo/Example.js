@@ -1,7 +1,5 @@
 import React from 'react';
-import Layout from '../src/Layout';
-import Flex from '../src/Flex';
-import Fixed from '../src/Fixed';
+import {Layout, Flex, Fixed} from '../index';
 
 
 var Demo = React.createClass({
