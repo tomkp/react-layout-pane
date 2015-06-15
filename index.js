@@ -1,5 +1,9 @@
+import Layout from './src/Layout.js';
+import Fixed from './src/Fixed.js';
+import Flex from './src/Flex.js';
+
 module.exports = {
-    Layout: require('./src/Layout.js'),
-    Fixed: require('./src/Fixed.js'),
-    Flex: require('./src/Flex.js')
+    Layout: Layout,
+    Fixed: Fixed,
+    Flex: Flex
 };
