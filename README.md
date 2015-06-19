@@ -1,4 +1,4 @@
-# react-layout
+# React Layout Pane
 
 React layout component using flexbox.
 
