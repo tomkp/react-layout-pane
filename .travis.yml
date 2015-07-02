@@ -1,4 +1,4 @@
 language: node_js
 after_script:
-  - npm run test:cover
+  - npm run test:coverage
 
