@@ -5,11 +5,11 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 
 var React = _interopRequire(require("react"));
 
-var _index = require("../index");
+var _ = require("../");
 
-var Layout = _index.Layout;
-var Flex = _index.Flex;
-var Fixed = _index.Fixed;
+var Layout = _.Layout;
+var Flex = _.Flex;
+var Fixed = _.Fixed;
 
 var Demo = React.createClass({
     displayName: "Demo",
@@ -86,13 +86,21 @@ var Demo = React.createClass({
 
 React.render(React.createElement(Demo, null), document.body);
 
-},{"../index":2,"react":177}],2:[function(require,module,exports){
+},{"../":2,"react":177}],2:[function(require,module,exports){
 "use strict";
 
+var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+
+var Layout = _interopRequire(require("./src/Layout.js"));
+
+var Fixed = _interopRequire(require("./src/Fixed.js"));
+
+var Flex = _interopRequire(require("./src/Flex.js"));
+
 module.exports = {
-    Layout: require("./src/Layout.js"),
-    Fixed: require("./src/Fixed.js"),
-    Flex: require("./src/Flex.js")
+    Layout: Layout,
+    Fixed: Fixed,
+    Flex: Flex
 };
 
 },{"./src/Fixed.js":178,"./src/Flex.js":179,"./src/Layout.js":180}],3:[function(require,module,exports){
