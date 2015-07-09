@@ -28,6 +28,7 @@
     "react-vendor-prefix": "^0.0.1"
   },
   "devDependencies": {
+    "babel": "^5.6.14",
     "babel-core": "^5.6.15",
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
@@ -39,11 +40,14 @@
     "mochify-istanbul": "^2.3.0"
   },
   "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "test": "mochify -R spec",
-    "test:watch": "mochify --watch",
+    "test:watch": "mochify -R spec --watch",
     "test:coverage": "node cover.js && cat lcov.info | coveralls && rm lcov.info",
-    "demo": "browserify demo/Example.js -t -o demo/bundle.js",
-    "demo:publish": "browserify demo/Example.js -t -o demo/bundle.js && surge demo damaged-turn.surge.sh"
+    "demo": "npm run compile && browserify demo/Example.js -t -o demo/bundle.js",
+    "demo:publish": "npm run compile && browserify demo/Example.js -t -o demo/bundle.js && surge demo damaged-turn.surge.sh",
+    "release:patch": "npm test && npm run compile && npm version patch && git push && npm publish"
   },
   "browserify": {
     "transform": [
