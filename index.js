@@ -1,6 +1,6 @@
-import Layout from './src/Layout.js';
-import Fixed from './src/Fixed.js';
-import Flex from './src/Flex.js';
+import Layout from './lib/Layout.js';
+import Fixed from './lib/Fixed.js';
+import Flex from './lib/Flex.js';
 
 module.exports = {
     Layout: Layout,
