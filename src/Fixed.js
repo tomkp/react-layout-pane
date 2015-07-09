@@ -22,10 +22,12 @@ let Fixed = React.createClass({
         let styles;
         if (this.props.type === 'rows') {
             styles = {
+                position: 'relative',
                 width: '100%'
             };
         } else {
             styles = {
+                position: 'relative',
                 height: '100%'
             };
         }
