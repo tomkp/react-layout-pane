@@ -178,11 +178,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
-
-    * {
-        position: relative;
-    }
-
+    
     html, body {
         font-size: 16px;
         line-height: 1.5rem;
