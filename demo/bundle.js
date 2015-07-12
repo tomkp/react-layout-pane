@@ -202,12 +202,13 @@ var Flex = _react2['default'].createClass({
         var style = undefined;
         if (this.props.type === 'rows') {
             style = {
-                flex: 1
+                flex: 1,
+                position: 'relative'
             };
         } else {
             style = {
                 flex: 1,
-
+                position: 'relative',
                 height: '100%',
                 minHeight: '100%'
             };

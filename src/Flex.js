@@ -23,12 +23,13 @@ let Flex = React.createClass({
         let style;
         if (this.props.type === 'rows') {
             style = {
-                flex: 1
+                flex: 1,
+                position: 'relative'
             };
         } else {
             style = {
                 flex: 1,
-
+                position: 'relative',
                 height: '100%',
                 minHeight: '100%'
             };
