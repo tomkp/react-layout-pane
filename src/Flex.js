@@ -29,9 +29,9 @@ let Flex = React.createClass({
         } else {
             style = {
                 flex: 1,
-                position: 'relative',
-                height: '100%',
-                minHeight: '100%'
+                position: 'relative'
+                //height: '100%',
+                //minHeight: '100%'
             };
         }
         let prefixed = VendorPrefix.prefix({styles: style});

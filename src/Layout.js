@@ -29,9 +29,17 @@ let Layout = React.createClass({
                 flex: 1,
                 flexDirection: 'column',
 
-                position: 'relative',
-                height: '100%',
-                minHeight: '100%'
+                //position: 'relative',
+                //height: '100%',
+                //minHeight: '100%'
+
+                //width: '100%',
+                position: 'absolute',
+                left: 0,
+                right: 0,
+
+                top: 0,
+                bottom: 0
             };
         } else {
             style = {
@@ -39,10 +47,14 @@ let Layout = React.createClass({
                 flex: 1,
                 flexDirection: 'row',
 
-                height: '100%',
+                //height: '100%',
                 position: 'absolute',
                 left: 0,
-                right: 0
+                right: 0,
+
+                top: 0,
+                bottom: 0
+
             };
         }
 

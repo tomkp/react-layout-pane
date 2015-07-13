@@ -14,12 +14,12 @@ let Demo = React.createClass({
                     <Layout type="columns">
                         <Fixed className="sidebar">
                             <Layout type="rows">
-                                <Fixed>
+                                <Fixed className="top-left">
                                     Top Left
                                 </Fixed>
                                 <Flex>
                                 </Flex>
-                                <Fixed>
+                                <Fixed className="bottom-left">
                                     Bottom Left
                                 </Fixed>
                             </Layout>
@@ -29,12 +29,12 @@ let Demo = React.createClass({
                         </Flex>
                         <Fixed className="sidebar">
                             <Layout type="rows">
-                                <Fixed>
+                                <Fixed className="top-right">
                                     Top Right
                                 </Fixed>
                                 <Flex>
                                 </Flex>
-                                <Fixed>
+                                <Fixed className="bottom-right">
                                     Bottom Right
                                 </Fixed>
                             </Layout>

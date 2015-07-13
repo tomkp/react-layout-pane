@@ -35,13 +35,13 @@ var Demo = _react2['default'].createClass({
                             { type: 'rows' },
                             _react2['default'].createElement(
                                 _.Fixed,
-                                null,
+                                { className: 'top-left' },
                                 'Top Left'
                             ),
                             _react2['default'].createElement(_.Flex, null),
                             _react2['default'].createElement(
                                 _.Fixed,
-                                null,
+                                { className: 'bottom-left' },
                                 'Bottom Left'
                             )
                         )
@@ -59,13 +59,13 @@ var Demo = _react2['default'].createClass({
                             { type: 'rows' },
                             _react2['default'].createElement(
                                 _.Fixed,
-                                null,
+                                { className: 'top-right' },
                                 'Top Right'
                             ),
                             _react2['default'].createElement(_.Flex, null),
                             _react2['default'].createElement(
                                 _.Fixed,
-                                null,
+                                { className: 'bottom-right' },
                                 'Bottom Right'
                             )
                         )
@@ -144,13 +144,13 @@ var Fixed = _react2['default'].createClass({
         var styles = undefined;
         if (this.props.type === 'rows') {
             styles = {
-                position: 'relative',
-                width: '100%'
+                position: 'relative'
+                //width: '100%'
             };
         } else {
             styles = {
-                position: 'relative',
-                height: '100%'
+                position: 'relative'
+                //height: '100%'
             };
         }
 
@@ -208,9 +208,9 @@ var Flex = _react2['default'].createClass({
         } else {
             style = {
                 flex: 1,
-                position: 'relative',
-                height: '100%',
-                minHeight: '100%'
+                position: 'relative'
+                //height: '100%',
+                //minHeight: '100%'
             };
         }
         var prefixed = _reactVendorPrefix2['default'].prefix({ styles: style });
@@ -269,9 +269,17 @@ var Layout = _reactAddons2['default'].createClass({
                 flex: 1,
                 flexDirection: 'column',
 
-                position: 'relative',
-                height: '100%',
-                minHeight: '100%'
+                //position: 'relative',
+                //height: '100%',
+                //minHeight: '100%'
+
+                //width: '100%',
+                position: 'absolute',
+                left: 0,
+                right: 0,
+
+                top: 0,
+                bottom: 0
             };
         } else {
             style = {
@@ -279,10 +287,14 @@ var Layout = _reactAddons2['default'].createClass({
                 flex: 1,
                 flexDirection: 'row',
 
-                height: '100%',
+                //height: '100%',
                 position: 'absolute',
                 left: 0,
-                right: 0
+                right: 0,
+
+                top: 0,
+                bottom: 0
+
             };
         }
 
