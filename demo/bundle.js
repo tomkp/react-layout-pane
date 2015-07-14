@@ -87,24 +87,14 @@ _react2['default'].render(_react2['default'].createElement(Demo, null), document
 },{"../":2,"react":180}],2:[function(require,module,exports){
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _libLayoutJs = require('./lib/Layout.js');
-
-var _libLayoutJs2 = _interopRequireDefault(_libLayoutJs);
-
-var _libFixedJs = require('./lib/Fixed.js');
-
-var _libFixedJs2 = _interopRequireDefault(_libFixedJs);
-
-var _libFlexJs = require('./lib/Flex.js');
-
-var _libFlexJs2 = _interopRequireDefault(_libFlexJs);
+var Layout = require('./lib/Layout.js');
+var Fixed = require('./lib/Fixed.js');
+var Flex = require('./lib/Flex.js');
 
 module.exports = {
-    Layout: _libLayoutJs2['default'],
-    Fixed: _libFixedJs2['default'],
-    Flex: _libFlexJs2['default']
+    Layout: Layout,
+    Fixed: Fixed,
+    Flex: Flex
 };
 
 },{"./lib/Fixed.js":3,"./lib/Flex.js":4,"./lib/Layout.js":5}],3:[function(require,module,exports){
