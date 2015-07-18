@@ -1,6 +1,7 @@
 import React from 'react/addons';
 import VendorPrefix from 'react-vendor-prefix';
 
+var {Children} = React;
 
 let Layout = React.createClass({
 
@@ -29,11 +30,6 @@ let Layout = React.createClass({
                 flex: 1,
                 flexDirection: 'column',
 
-                //position: 'relative',
-                //height: '100%',
-                //minHeight: '100%'
-
-                //width: '100%',
                 position: 'absolute',
                 left: 0,
                 right: 0,
@@ -47,7 +43,6 @@ let Layout = React.createClass({
                 flex: 1,
                 flexDirection: 'row',
 
-                //height: '100%',
                 position: 'absolute',
                 left: 0,
                 right: 0,
@@ -60,19 +55,7 @@ let Layout = React.createClass({
 
         let prefixed = VendorPrefix.prefix({styles: style});
 
-        let type = this.props.type;
-        let index = 0;
-        let elements = [];
-        if (this.props.children) {
-             elements = this.props.children.map((child) => {
-                return React.addons.cloneWithProps(child, {
-                    type: type,
-                    key: index++
-                });
-            });
-        }
-
-        return <div className={classes.join(' ')} style={prefixed.styles}>{elements}</div>;
+        return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
     }
 });
 
