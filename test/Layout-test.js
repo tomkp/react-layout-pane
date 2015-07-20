@@ -36,10 +36,8 @@ describe('Layout', function () {
         expect(fixed.type.displayName).to.equal('Fixed');
         expect(flex.type.displayName).to.equal('Flex');
 
-        expect(fixed.props.type).to.equal('rows');
         expect(fixed.props.className).to.equal('header');
 
-        expect(flex.props.type).to.equal('rows');
         expect(flex.props.className).to.equal('content');
     });
 });
