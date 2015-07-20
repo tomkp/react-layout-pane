@@ -115,36 +115,15 @@ var _react2 = _interopRequireDefault(_react);
 var Fixed = _react2['default'].createClass({
     displayName: 'Fixed',
 
-    propTypes: {
-        type: _react2['default'].PropTypes.string.isRequired
-    },
-
-    getDefaultProps: function getDefaultProps() {
-        return {
-            type: 'columns'
-        };
-    },
-
     render: function render() {
         var classes = ['Fixed'];
         if (this.props.className) {
             classes.push(this.props.className);
         }
 
-        var styles = undefined;
-        if (this.props.type === 'rows') {
-            styles = {
+        return _react2['default'].createElement('div', { className: classes.join(' '), style: {
                 position: 'relative'
-                //width: '100%'
-            };
-        } else {
-            styles = {
-                position: 'relative'
-                //height: '100%'
-            };
-        }
-
-        return _react2['default'].createElement('div', { className: classes.join(' '), style: styles }, this.props.children);
+            } }, this.props.children);
     }
 });
 
@@ -173,37 +152,16 @@ var _reactVendorPrefix2 = _interopRequireDefault(_reactVendorPrefix);
 var Flex = _react2['default'].createClass({
     displayName: 'Flex',
 
-    propTypes: {
-        type: _react2['default'].PropTypes.string.isRequired
-    },
-
-    getDefaultProps: function getDefaultProps() {
-        return {
-            type: 'columns'
-        };
-    },
-
     render: function render() {
         var classes = ['Flex'];
         if (this.props.className) {
             classes.push(this.props.className);
         }
 
-        var style = undefined;
-        if (this.props.type === 'rows') {
-            style = {
+        var prefixed = _reactVendorPrefix2['default'].prefix({ styles: {
                 flex: 1,
                 position: 'relative'
-            };
-        } else {
-            style = {
-                flex: 1,
-                position: 'relative'
-                //height: '100%',
-                //minHeight: '100%'
-            };
-        }
-        var prefixed = _reactVendorPrefix2['default'].prefix({ styles: style });
+            } });
 
         return _react2['default'].createElement('div', { className: classes.join(' '), style: prefixed.styles }, this.props.children);
     }
@@ -230,6 +188,8 @@ var _reactAddons2 = _interopRequireDefault(_reactAddons);
 var _reactVendorPrefix = require('react-vendor-prefix');
 
 var _reactVendorPrefix2 = _interopRequireDefault(_reactVendorPrefix);
+
+var Children = _reactAddons2['default'].Children;
 
 var Layout = _reactAddons2['default'].createClass({
     displayName: 'Layout',
@@ -259,11 +219,6 @@ var Layout = _reactAddons2['default'].createClass({
                 flex: 1,
                 flexDirection: 'column',
 
-                //position: 'relative',
-                //height: '100%',
-                //minHeight: '100%'
-
-                //width: '100%',
                 position: 'absolute',
                 left: 0,
                 right: 0,
@@ -277,7 +232,6 @@ var Layout = _reactAddons2['default'].createClass({
                 flex: 1,
                 flexDirection: 'row',
 
-                //height: '100%',
                 position: 'absolute',
                 left: 0,
                 right: 0,
@@ -290,19 +244,7 @@ var Layout = _reactAddons2['default'].createClass({
 
         var prefixed = _reactVendorPrefix2['default'].prefix({ styles: style });
 
-        var type = this.props.type;
-        var index = 0;
-        var elements = [];
-        if (this.props.children) {
-            elements = this.props.children.map(function (child) {
-                return _reactAddons2['default'].addons.cloneWithProps(child, {
-                    type: type,
-                    key: index++
-                });
-            });
-        }
-
-        return _reactAddons2['default'].createElement('div', { className: classes.join(' '), style: prefixed.styles }, elements);
+        return _reactAddons2['default'].createElement('div', { className: classes.join(' '), style: prefixed.styles }, this.props.children);
     }
 });
 
