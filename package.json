@@ -32,20 +32,22 @@
     "babel-core": "^5.6.15",
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
-    "react-tools": "^0.13.3",
+    "chai": "^3.2.0",
     "coveralls": "^2.11.2",
-    "expect.js": "^0.3.1",
-    "express": "^4.13.1",
     "mochify": "^2.10.0",
-    "mochify-istanbul": "^2.3.0"
+    "mochify-istanbul": "^2.3.0",
+    "react-tools": "^0.13.3",
+    "watchify": "^3.3.1"
   },
   "scripts": {
     "compile": "babel -d lib/ src/",
+    "compile:watch": "babel -w -d lib/ src/",
     "prepublish": "npm run compile",
     "test": "mochify -R spec",
-    "test:watch": "mochify -R spec --watch",
+    "test:watch": "npm run compile:watch & mochify -R spec --watch",
     "test:coverage": "node cover.js && cat lcov.info | coveralls && rm lcov.info",
     "demo": "npm run compile && browserify demo/Example.js -t -o demo/bundle.js",
+    "demo:watch": "npm run compile:watch & watchify demo/Example.js -t -o demo/bundle.js",
     "demo:publish": "npm run compile && browserify demo/Example.js -t -o demo/bundle.js && surge demo damaged-turn.surge.sh",
     "release:patch": "npm test && npm run compile && npm version patch && git push && npm publish"
   },
