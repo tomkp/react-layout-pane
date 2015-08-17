@@ -1,4 +1,5 @@
-import expect from 'expect.js';
+import chai from 'chai';
+const expect = chai.expect;
 import React from 'react/addons';
 const { TestUtils } = React.addons;
 const Layout = require('../src/Layout');
