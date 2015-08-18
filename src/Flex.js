@@ -1,8 +1,8 @@
+import { Component } from 'react';
 import React from 'react';
 import VendorPrefix from 'react-vendor-prefix';
 
-
-let Flex = React.createClass({
+export default class Flex extends Component {
 
     render() {
         let classes = ['Flex'];
@@ -17,7 +17,4 @@ let Flex = React.createClass({
 
         return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
     }
-});
-
-
-export default Flex;
+}

@@ -1,19 +1,16 @@
-import React from 'react/addons';
 import VendorPrefix from 'react-vendor-prefix';
+import { Component } from 'react';
+import React from 'react';
 
-var {Children} = React;
 
-let Layout = React.createClass({
 
-    propTypes: {
-        type: React.PropTypes.string.isRequired
-    },
+export default class Layout extends Component {
 
-    getDefaultProps() {
-        return {
-            type: 'columns'
-        }
-    },
+
+    constructor(props) {
+        super(props);
+    }
+
 
     render() {
         let classes = ['Layout'];
@@ -22,42 +19,34 @@ let Layout = React.createClass({
         }
         classes.push(this.props.type);
 
-        let style;
+        let style = {
+            display: 'flex',
+            flex: 1,
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0
+        };
 
         if (this.props.type === 'rows') {
-            style = {
-                display: 'flex',
-                flex: 1,
-                flexDirection: 'column',
-
-                position: 'absolute',
-                left: 0,
-                right: 0,
-
-                top: 0,
-                bottom: 0
-            };
+            style.flexDirection = 'column';
         } else {
-            style = {
-                display: 'flex',
-                flex: 1,
-                flexDirection: 'row',
-
-                position: 'absolute',
-                left: 0,
-                right: 0,
-
-                top: 0,
-                bottom: 0
-
-            };
+            style.flexDirection = 'row';
         }
 
         let prefixed = VendorPrefix.prefix({styles: style});
 
         return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
     }
-});
+}
 
 
-export default Layout;
+Layout.propTypes = {
+    type: React.PropTypes.string.isRequired
+};
+
+Layout.defaultProps = {
+    type: 'columns'
+};
+

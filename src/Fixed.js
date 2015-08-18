@@ -1,7 +1,7 @@
+import { Component } from 'react';
 import React from 'react';
 
-
-let Fixed = React.createClass({
+export default class Fixed extends Component {
 
     render() {
         let classes = ['Fixed'];
@@ -9,11 +9,6 @@ let Fixed = React.createClass({
             classes.push(this.props.className);
         }
 
-        return <div className={classes.join(' ')} style={{
-            position: 'relative'
-        }}>{this.props.children}</div>;
+        return <div className={classes.join(' ')} style={{position: 'relative'}}>{this.props.children}</div>;
     }
-});
-
-
-export default Fixed;
+}
