@@ -29,7 +29,7 @@ export default class Layout extends Component {
             bottom: 0
         };
 
-        if (this.props.type === 'rows') {
+        if (this.props.type === 'column') {
             style.flexDirection = 'column';
         } else {
             style.flexDirection = 'row';
@@ -47,6 +47,6 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-    type: 'columns'
+    type: 'row'
 };
 

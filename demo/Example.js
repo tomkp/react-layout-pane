@@ -6,14 +6,14 @@ let Demo = React.createClass({
 
     render: function() {
         return (
-            <Layout type="rows">
+            <Layout type="column">
                 <Fixed className="header">
                     Fixed Header
                 </Fixed>
                 <Flex>
-                    <Layout type="columns">
+                    <Layout type="row">
                         <Fixed className="sidebar">
-                            <Layout type="rows">
+                            <Layout type="column">
                                 <Fixed className="top-left">
                                     Top Left
                                 </Fixed>
@@ -28,7 +28,7 @@ let Demo = React.createClass({
                             Flex Body
                         </Flex>
                         <Fixed className="sidebar">
-                            <Layout type="rows">
+                            <Layout type="column">
                                 <Fixed className="top-right">
                                     Top Right
                                 </Fixed>

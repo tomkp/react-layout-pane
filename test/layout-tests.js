@@ -8,7 +8,7 @@ import {Layout, Fixed, Flex} from '../';
 describe('Layout', function () {
 
     const layout = TestUtils.renderIntoDocument(
-        <Layout type="rows">
+        <Layout type="column">
             <Fixed className="header">
                 Fixed Header
             </Fixed>

@@ -14,7 +14,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
 
 
 ```html
-   <Layout type="rows">
+   <Layout type="column">
        <Fixed className="header">
            Fixed Header
        </Fixed>
@@ -34,10 +34,10 @@ Check out the [demo](http://damaged-turn.surge.sh)
 
 
 ```html
-   <Layout type="rows">
+   <Layout type="column">
        <Fixed className="header">Fixed Header</Fixed>
        <Flex>
-           <Layout type="columns">
+           <Layout type="row">
                <Fixed className="sidebar">Fixed Sidebar</Fixed>
                <Flex className="content">Flex Body</Flex>
            </Layout>
@@ -55,10 +55,10 @@ Check out the [demo](http://damaged-turn.surge.sh)
 
 
 ```html
-    <Layout type="columns">
+    <Layout type="row">
         <Fixed className="sidebar">Fixed Sidebar</Fixed>
         <Flex>
-            <Layout type="rows">
+            <Layout type="column">
                 <Fixed className="header">Fixed Header</Fixed>
                 <Flex className="content">Flex Body</Flex>
             </Layout>
@@ -76,9 +76,9 @@ Check out the [demo](http://damaged-turn.surge.sh)
 
 
 ```html
-    <Layout type="columns">
+    <Layout type="row">
         <Fixed className="sidebar">
-            <Layout type="rows">
+            <Layout type="column">
                 <Fixed>
                     Top Left
                 </Fixed>
@@ -90,7 +90,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
             </Layout>
         </Fixed>
         <Flex>
-            <Layout type="rows">
+            <Layout type="column">
                 <Fixed className="header">
                     Fixed Header
                 </Fixed>
@@ -103,7 +103,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
             </Layout>
         </Flex>
         <Fixed className="sidebar">
-            <Layout type="rows">
+            <Layout type="column">
                 <Fixed>
                     Top Right
                 </Fixed>
@@ -127,14 +127,14 @@ Check out the [demo](http://damaged-turn.surge.sh)
 
 
 ```html
-    <Layout type="rows">
+    <Layout type="column">
         <Fixed className="header">
             Fixed Header
         </Fixed>
         <Flex>
-            <Layout type="columns">
+            <Layout type="row">
                 <Fixed className="sidebar">
-                    <Layout type="rows">
+                    <Layout type="column">
                         <Fixed>
                             Top Left
                         </Fixed>
@@ -149,7 +149,7 @@ Check out the [demo](http://damaged-turn.surge.sh)
                     Flex Body
                 </Flex>
                 <Fixed className="sidebar">
-                    <Layout type="rows">
+                    <Layout type="column">
                         <Fixed>
                             Top Right
                         </Fixed>
