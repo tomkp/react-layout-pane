@@ -2,7 +2,7 @@
   "name": "react-layout-pane",
   "description": "React flexbox layout component",
   "main": "index.js",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "repository": {
     "type": "git",
     "url": "https://github.com/tomkp/react-layout-pane"
