@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {Layout, Flex, Fixed} from '../';
 
 
@@ -50,4 +51,4 @@ let Demo = React.createClass({
 
 });
 
-React.render(<Demo />, document.body);
+ReactDOM.render(<Demo />, document.getElementById("container"));

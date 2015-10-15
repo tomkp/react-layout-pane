@@ -1,13 +1,14 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTestUtils from 'react-addons-test-utils';
 import chai from 'chai';
 const expect = chai.expect;
-import React from 'react/addons';
-const { TestUtils } = React.addons;
 import {Layout, Fixed, Flex} from '../';
 
 
 describe('Layout', function () {
 
-    const layout = TestUtils.renderIntoDocument(
+    const layout = ReactTestUtils.renderIntoDocument(
         <Layout type="column">
             <Fixed className="header">
                 Fixed Header
@@ -20,13 +21,13 @@ describe('Layout', function () {
 
 
     it('renders the Layout', function () {
-        const component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
-        expect(component.getDOMNode().children.length).to.equal(2);
+        const component = ReactTestUtils.findRenderedComponentWithType(layout, Layout);
+        expect(ReactDOM.findDOMNode(component).children.length).to.equal(2);
     });
 
 
     it('renders the children', function () {
-        const component = TestUtils.findRenderedDOMComponentWithClass(layout, 'Layout');
+        const component = ReactTestUtils.findRenderedComponentWithType(layout, Layout);
         expect(component.props.children.length).to.equal(2);
         const fixed = component.props.children[0];
         const flex = component.props.children[1];
@@ -39,15 +40,15 @@ describe('Layout', function () {
 
 describe('Flex', function () {
 
-    const flex = TestUtils.renderIntoDocument(
+    const flex = ReactTestUtils.renderIntoDocument(
         <Flex className="body">
             Flex Body
         </Flex>
     );
 
     it('renders the Flex component', function () {
-        const component = TestUtils.findRenderedDOMComponentWithClass(flex, 'Flex');
-        expect(component.getDOMNode().textContent).to.equal('Flex Body');
+        const component = ReactTestUtils.findRenderedComponentWithType(flex, Flex);
+        expect(ReactDOM.findDOMNode(component).textContent).to.equal('Flex Body');
     });
 
 });
@@ -56,15 +57,15 @@ describe('Flex', function () {
 
 describe('Fixed', function () {
 
-    const fixed = TestUtils.renderIntoDocument(
+    const fixed = ReactTestUtils.renderIntoDocument(
         <Fixed className="header">
             Fixed Header
         </Fixed>
     );
 
     it('renders the Fixed component', function () {
-        const component = TestUtils.findRenderedDOMComponentWithClass(fixed, 'Fixed');
-        expect(component.getDOMNode().textContent).to.equal('Fixed Header');
+        const component = ReactTestUtils.findRenderedComponentWithType(fixed, Fixed);
+        expect(ReactDOM.findDOMNode(component).textContent).to.equal('Fixed Header');
     });
 
 });

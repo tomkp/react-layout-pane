@@ -24,7 +24,8 @@
     "es6"
   ],
   "dependencies": {
-    "react": "^0.13.3",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
     "react-vendor-prefix": "^0.0.1"
   },
   "devDependencies": {
@@ -36,7 +37,7 @@
     "coveralls": "^2.11.4",
     "mochify": "^2.13.0",
     "mochify-istanbul": "^2.3.0",
-    "react-tools": "^0.13.3",
+    "react-addons-test-utils": "^0.14.0",
     "watchify": "^3.4.0"
   },
   "scripts": {
