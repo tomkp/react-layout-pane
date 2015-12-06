@@ -1,5 +1,6 @@
-import { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+import VendorPrefix from 'react-vendor-prefix';
+import assign from 'object-assign';
 
 export default class Fixed extends Component {
 
@@ -9,6 +10,21 @@ export default class Fixed extends Component {
             classes.push(this.props.className);
         }
 
-        return <div className={classes.join(' ')} style={{position: 'relative'}}>{this.props.children}</div>;
+        let style = {
+            position: 'relative'
+        };
+
+        if (this.props.style) {
+            assign(style, this.props.style);
+        }
+
+        style = VendorPrefix.prefix({style}).style;
+
+        return <div className={classes.join(' ')} style={style}>{this.props.children}</div>;
     }
 }
+
+Fixed.propTypes = {
+    className: React.PropTypes.string,
+    style: React.PropTypes.object
+};
