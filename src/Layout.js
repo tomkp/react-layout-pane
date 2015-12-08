@@ -1,16 +1,8 @@
+import React, { Component } from 'react';
 import VendorPrefix from 'react-vendor-prefix';
-import { Component } from 'react';
-import React from 'react';
-
-
+import assign from 'object-assign';
 
 export default class Layout extends Component {
-
-
-    constructor(props) {
-        super(props);
-    }
-
 
     render() {
         let classes = ['Layout'];
@@ -29,21 +21,23 @@ export default class Layout extends Component {
             bottom: 0
         };
 
-        if (this.props.type === 'column') {
-            style.flexDirection = 'column';
-        } else {
-            style.flexDirection = 'row';
+        style.flexDirection = (this.props.type === 'column') ? 'column' : 'row';
+
+        if (this.props.style) {
+            assign(style, this.props.style);
         }
 
-        let prefixed = VendorPrefix.prefix({styles: style});
+        style = VendorPrefix.prefix({style}).style;
 
-        return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
+        return <div className={classes.join(' ')} style={style}>{this.props.children}</div>;
     }
 }
 
 
 Layout.propTypes = {
-    type: React.PropTypes.string.isRequired
+    type: React.PropTypes.string.isRequired,
+    className: React.PropTypes.string,
+    style: React.PropTypes.object
 };
 
 Layout.defaultProps = {
