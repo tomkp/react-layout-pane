@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import assign from 'object-assign';
 import {Layout, Flex, Fixed} from '../';
 
 

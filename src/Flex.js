@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
 import VendorPrefix from 'react-vendor-prefix';
+import assign from 'object-assign';
 
 export default class Flex extends Component {
 
@@ -10,11 +10,22 @@ export default class Flex extends Component {
             classes.push(this.props.className);
         }
 
-        let prefixed = VendorPrefix.prefix({styles: {
+        let style = {
             flex: 1,
             position: 'relative'
-        }});
+        };
 
-        return <div className={classes.join(' ')} style={prefixed.styles}>{this.props.children}</div>;
+        if (this.props.style) {
+            assign(style, this.props.style);
+        }
+
+        style = VendorPrefix.prefix({style}).style;
+
+        return <div className={classes.join(' ')} style={style}>{this.props.children}</div>;
     }
 }
+
+Flex.propTypes = {
+    className: React.PropTypes.string,
+    style: React.PropTypes.object
+};
